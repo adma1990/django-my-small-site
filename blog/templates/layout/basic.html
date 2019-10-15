@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+
+    <style>
+          body { background-color: #f9f5f0; }
+          hr { background-color: black; }
+    </style>
+
+
+    <title>ADMA</title>
+
+  </head>
+  <body>
+
+<!--Навбар №1-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="#"><img src="https://pngicon.ru/file/uploads/instagram-128x128.png" alt="instagram" style="width: 30px; height: 30px"></a>
+      <a class="navbar-brand" href="#"><img src="https://pngicon.ru/file/uploads/vk-128x128.png" alt="Значок вк" style="width: 30px; height: 30px"></a>
+
+
+
+
+    </nav>
+
+<!--Навбар №2-->
+    <nav class="navbar navbar-expand-lg nav nav-pills nav-fill" style="background-color: #ffffff;">
+      <a class="nav-item nav-link text-dark" href="#">&#128222; Наш телефон<br/> +7(900)000-00-00<br/>+7(900)000-00-00</a>
+      <a class="navbar-brand" href="#"><p style="font-size: 150px">ADMA</p></a>
+      <a class="nav-item nav-link text-dark" href="#">&#9993; Адрес<p>г. Москва ул.Московская д.0</p></a>
+    </nav>
+
+<!--Навбар №3-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+    <li class="nav-item ">
+    <a class="nav-link text-light mr-5" href="{% url 'index' %}">Главная <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="{% url 'katalog' %}">Каталог</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="{% url 'form' %}">Отзывы</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="{% url 'delivery' %}">Доставка</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="{% url 'contacts' %}">Контакты</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="#">Вакансии</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="#">Новости</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-light mr-5" href="#">О нас</a>
+    </li>
+    </ul>
+    </div>
+    </nav>
+
+
+
+
+{% block content %}
+{% endblock %}
+<div class="row bg-dark mt-5 p-5">
+<div class="col">
+<p><a class="text-white" href="{% url 'index' %}">Главная</a></p>
+<p><a class="text-white" href="{% url 'katalog' %}">Каталог</a></p>
+</div>
+<div class="col">
+  <p><a class="text-white" href="{% url 'form' %}">Отзывы</a></p>
+  <p><a class="text-white" href="{% url 'delivery' %}">Доставка</a></p>
+</div>
+
+<div class="col">
+  <p><a class="text-white" href="{% url 'contacts' %}">Контакты</a></p>
+  <p><a class="text-white" href="#">Вакансии</a></p>
+</div>
+
+<div class="col">
+  <p><a class="text-white" href="#">Новости</a></p>
+  <p><a class="text-white" href="#">О нас</a></p>
+</div>
+</div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

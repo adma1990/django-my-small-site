@@ -1,0 +1,33 @@
+{% extends "layout/basic.html" %}
+
+
+
+{% block content %}
+
+<!-- Контейнер с карточкой товара -->
+<div class="container">
+
+<div class="row">
+
+
+{% for mag in mags %}
+<div class="col-sm col-md-4 col-lg-4 col-xl-3 p-2 mx-4">
+<div class="card" style="width: 20rem;">
+  <img src="{{ mag.image.url }}" class="card-img-top" alt="..." style="width: 318px; height: 350px">
+  <div class="card-body">
+    <h5 class="card-title">{{ mag.name }}</h5>
+    <p class="card-text"></p>
+    <a href="{% url 'product' slug=mag.slug %}" class="btn btn-primary">Подробнее</a>
+  </div>
+</div>
+</div>
+
+
+
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
